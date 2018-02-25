@@ -1,13 +1,13 @@
-package Koneksi_db;
+package manajamensekolah;
 
-    import java.sql.Connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Db_koneksi {
       private static Connection conn;
-      public static Connection getKoneksi( ){
+      public static Connection getConnection(){
                String host       = "jdbc:mysql://localhost/manajamen_sekolah",
                           user       = "root",
                           pass       = "";
@@ -17,5 +17,6 @@ public class Db_koneksi {
                        JOptionPane.showMessageDialog(null, err.getMessage( ) );
                }
                return conn;
+      
       }
 }
